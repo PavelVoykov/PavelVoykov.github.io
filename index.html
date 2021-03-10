@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+    <html>
+	<head>
+        <link rel="shortcut icon" href="https://cdn-0.emojis.wiki/emoji-pics/facebook/red-heart-facebook.png"/>
+	<meta charset="utf-8">
+        <title>For my beautiful DariaVoykova</title>
+		
+	</head>
+    <body>
+
+                  
+                  
+        		<style>
+       
+              .top{
+                  
+                  position: absolute;
+                  left: 46.5%;
+              }
+              
+			#linktoping{
+				padding-top: 20px
+       
+			}
+
+                        #linktospace{
+				padding-top: 20px
+                                zoom: 50%;
+       
+			}
+
+
+			#button{
+			font-size: 24px;
+				height: 35px;
+				width: 10%;
+				position: absolute;
+				top: 105px;
+				left: 45%
+			
+			}
+			#risuwa4{
+				position: absolute;
+                left: 370px;
+				top: 150px;
+			}
+                       #background{
+                       position:fixed;
+                       left: -5%;
+                       top: -0%;
+                       width: 110%;
+                       z-index: -2;
+                       background-repeat: repeat-y;
+
+                    
+             } 
+		</style>
+                <canvas id="risuwa4"  width="600px" height="400" ></canvas>
+                <img id = "background"; src = "https://i.ytimg.com/vi/PMONRDBJtSc/maxresdefault.jpg" >
+		<label class="top" style = "color:white; margin: auto; margin-top: 10px;">Is that you love?<br>
+		<input id="password" type="text" style="margin: -45%; margin-top: 25px; ;width: 150% ;">
+		</label><br>
+		<a id="linktoping" href="http://dar.free.bg/Ping-Pong/start.html"></a>
+                <br>
+                <a id="linktospace" href="http://dar.free.bg/spaceGame/index.html"></a>
+		
+<button id="button" type="button" onclick = "prowerka()">Enter</button>
+	
+		</body>
+		<script> 
+
+
+			
+
+			
+
+			var pingP = document.getElementById("linktoping");
+                        var spaceG = document.getElementById("linktospace")
+			
+		  // Step 1: Find the element we want the event on
+			//var password=document.getElementById("password")
+			var button = document.getElementById("button");
+  // Step 2: Define the event listener function
+			var prowerka = function(){
+				document.getElementById("button")
+				var pasword = document.getElementById("password").value;
+				if(pasword === "DariaVoykova"){
+					console.log("corect")
+					pingP.innerHTML="Ping-Pong"
+                                        spaceG.innerHTML="Space Game"
+		pingP.href = "http://dar.free.bg/Ping-Pong/start.html";
+                spaceG.href = "http://dar.free.bg/spaceGame/index.html"
+              var start = new Date("Feb 16, 2020 20:00:00").getTime();
+
+	        	 var c = document.getElementById("risuwa4");
+		 var context = c.getContext("2d");
+    X=145;
+      
+ 
+var draw = function(){
+          var time=[0,0,0,0,0,0];
+      
+      var end = new Date().getTime();
+      var distance = end - start;
+    time[4] = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+   time[3] = Math.floor(distance / (1000 * 60 * 60 * 24));
+   time[2] = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+   time[1] = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+   time[0] = Math.floor((distance % (1000 * 60)) / 1000);
+    
+
+    
+
+context.fillStyle = "#ffffff"
+context.fillRect(0,0,600,400)
+var LoveMeter = function(Y,T,mult){
+    
+            context.fillStyle="#b300b3";
+    context.fillRect(X-10,Y,10,25);
+     			context.fillStyle="#ff00ff";
+   context.fillRect(X,Y+5,time[T]*mult,15)
+    context.fillStyle="#b300b3";
+    context.fillRect(X+305,Y,10,25);
+}
+
+
+    LoveMeter(100,0,5);
+    LoveMeter(160,1,5);
+    LoveMeter(220,2,12.5);
+    
+                context.fillStyle="#b300b3";
+    context.fillRect(X-10,280,10,25);
+     			context.fillStyle="#ff00ff";
+   context.fillRect(X,285,305,15)
+    context.fillStyle="#b300b3";
+    context.fillRect(X+305,280,10,25);
+    
+    LoveMeter(340,4,5);
+        var timeText = function (Text,PosX,PosY){
+    context.fillStyle="#3D004D"
+    context.font = "35px Arial Black";
+    context.fillText(Text,PosX,PosY+17);
+        }
+    timeText("РЎРµРєСѓРЅРґРё:",X+45,75);
+    timeText("РњРёРЅСѓС‚Рё:",X+55, 135);
+    timeText("Р§Р°СЃРѕРІРµ:",X+55, 195);
+    timeText("Р”РЅРё:",X+75,255);
+    timeText("Р“РѕРґРёРЅРё:",X+65, 315);
+    timeText(time[0],X+230,75);
+    timeText(time[1],X+220, 135);
+    timeText(time[2],X+220, 195);
+     timeText(time[3],X+180, 255); 
+     timeText(time[4],X+240, 315); 
+
+}
+   var myVar=setInterval(draw,1000);
+
+			 
+				}
+			}
+  // Step 3: Attach event listener to element
+  document.getElementById("button").click();
+		
+
+		</script>
+			
+
+		
+
+    </html>						
